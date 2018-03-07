@@ -93,6 +93,16 @@ $(".operator").on('click', function() {
     $("#operator").text($(this).text());
 });
 
+$("#button-1, #button-2, #button-3, #button-4, #button-5, #button-6, #button-7, #button-8, #button-9, #button-0").on('click', function() {
+    x += $(this).val();
+    $("#second-number").text(x);
+});
+
+$("#button-clear").on('click', function () {
+    $("#first-number, #operator, #second-number").hide();
+});
+
+
 });
 
 </script>
