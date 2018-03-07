@@ -80,6 +80,7 @@
 $(document).ready(function(){
 
 let x="";
+let y;
 // Your code here...
 
 
@@ -88,6 +89,9 @@ $("#button-1, #button-2, #button-3, #button-4, #button-5, #button-6, #button-7, 
     $("#first-number").text(x);
 });
 
+$(".operator").on('click', function() {
+    $("#operator").text($(this).text());
+});
 
 });
 
