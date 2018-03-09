@@ -87,14 +87,17 @@ $(document).ready(function(){
         let result = "";
 
     // Clear Function
-        const clear = function(){
+        const enter = function(){
             firstNumber = "";
             secondNumber = "";
             operator = "";
-            $('#first-number').empty();
-            $('#second-number').empty();
-            $('#operator').empty();
+            $('#first-number, #second-number , #operator').empty(); //optimized
             console.log('clear');
+        }
+        const clear = function(){
+            enter();
+            result="";
+            $('#result').empty();
         }
 
         $('#button-clear').click(clear);
@@ -106,7 +109,7 @@ $(document).ready(function(){
                     })
     // Number Function
         $('.number').click(function(){
-            if (operator === ""){
+            if (operator){ //optimized
                 result = "";
                 $('#result').empty();
                 firstNumber += $(this).val();
@@ -138,7 +141,7 @@ $(document).ready(function(){
             }
             console.log(result)
             $('#result').text(result);
-            clear();
+            enter();
         })
 
 });
