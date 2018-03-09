@@ -122,16 +122,16 @@ $(document).ready(function(){
     // Calc Function
         $('.equal').click(function(){
             if (operator === '+'){
-                result = parseInt(firstNumber)+parseInt(secondNumber);
+                result = parseInt(firstNumber,10)+parseInt(secondNumber,10);
             }
             else if (operator === '-'){
-                result = parseInt(firstNumber)-parseInt(secondNumber);
+                result = parseInt(firstNumber,10)-parseInt(secondNumber,10);
             }
             else if (operator === 'x'){
-                result = parseInt(firstNumber)*parseInt(secondNumber);
+                result = parseInt(firstNumber,10)*parseInt(secondNumber,10);
             }
             else if (operator === '^'){
-                result = parseInt(firstNumber)**parseInt(secondNumber);
+                result = parseInt(firstNumber,10)**parseInt(secondNumber,10);
             }
             console.log(result)
             $('#result').text(result);
